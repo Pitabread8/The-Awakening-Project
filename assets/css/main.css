@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* color: white; */
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+#open {
+  animation: pulse 2s infinite;
+  transform-origin: 0 0;
+}
+
+#open:hover {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+/* html {
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+} */
