@@ -23,6 +23,9 @@ export default {
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
   },
+  mounted() {
+    this.audio = new Audio(prelude);
+  },
   beforeUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
     this.audio.pause();
@@ -32,7 +35,7 @@ export default {
       isOpen: false,
       isShown: false,
       a: 0,
-      audio: new Audio(prelude),
+      audio: null,
       button: {
         arrow: "mdi:chevron-right",
       },
