@@ -1,8 +1,3 @@
-<!-- 
-font change for quotes
-update songs
--->
-
 <script setup>
 useHead({
   script: [{ src: "https://unpkg.com/aos@next/dist/aos.js", body: true }],
@@ -13,11 +8,11 @@ useHead({
 import prelude from "../assets/audio/prelude.mp3";
 import milliondollarman from "../assets/audio/milliondollarman.mp3";
 import poetpeasant from "../assets/audio/poetpeasant.mp3";
-import ride from "../assets/audio/ride.mp3";
+import blackbird from "../assets/audio/blackbird.mp3";
 import fadeintoyou from "../assets/audio/fadeintoyou.mp3";
 import lookbridge from "../assets/audio/lookbridge.mp3";
 import zampa from "../assets/audio/zampa.mp3";
-import seabirds from "../assets/audio/seabirds.ogg";
+import seabirds from "../assets/audio/seabirds.mp3";
 
 export default {
   beforeMount() {
@@ -58,8 +53,8 @@ export default {
       let numerals = ["0", "I", "II", "III", "IV", "V", "VI", "VII"];
       document.getElementById("number").innerText = numerals[index];
 
-      // let audios = [prelude, milliondollarman, zampa, ride, fadeintoyou, lookbridge, poetpeasant, seabirds];
-      let audios = [prelude, milliondollarman, zampa, ride, fadeintoyou, seabirds];
+      // let audios = [prelude, milliondollarman, zampa, blackbird, fadeintoyou, lookbridge, poetpeasant, seabirds];
+      let audios = [prelude, milliondollarman, zampa, blackbird, fadeintoyou, seabirds];
 
       if (index != this.a) {
         this.audio.pause();
@@ -85,29 +80,34 @@ export default {
   <Head>
     <Link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </Head>
-  <section v-if="!isOpen" class="fixed left-0 top-0 h-screen w-auto bg-blue-100">
-    <button id="open" @click="openPage()" class="fixed left-1/2 top-1/2 h-36 w-36 translate-x-[-50%] translate-y-[-50%] rounded-full bg-blue-950">
-      <Icon class="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-8xl text-blue-100" name="mdi:play" />
+  <section v-if="!isOpen" class="h-screen w-screen bg-blue-950">
+    <button id="open" @click="openPage()" class="fixed left-1/2 top-1/2 h-36 w-36 translate-x-[-50%] translate-y-[-50%] rounded-full bg-blue-50">
+      <Icon class="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-8xl text-blue-950" name="mdi:play" />
     </button>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-100">
-    <div class="relative p-40">
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-900">
+    <div class="relative p-40 text-blue-50">
       <h2>Welcome!</h2>
       <p>
-        <em>The Awakening</em> by Kate Chopin deals with a character&#39;s realization of her true self, through an "awakening." This concept stood out to me, as it will always be relatable and
+        <em>The Awakening</em>
+        by Kate Chopin deals with a character&#39;s realization of her true self, through an <span class="font-mono">awakening</span>. This concept stood out to me, as it will always be relatable and
         relevant to anyone, anywhere, at any time. I set out to investigate the idea of an awakening in the consciousness and what it means to the real world. My project identifies seven central
-        themes in the book and connects them to analyses of their broader meaning. <br />
+        themes in the book and connects them to analyses of their broader meaning.
         <br />
-        <em>The Awakening</em> initially seems like just a feminist period piece, but upon closer inspection, it has a deeper meaning about consciousness and self that anyone can learn from. The theme
-        of our Comparative Literature course is the concept of "Human." <em>The Awakening</em> grapples with these questions, showing the human transformation in the protagonist from one tied down by
-        society to one who is free and completely herself. Through dealing with the concept of self, the book addresses humanity and how to define it. <br />
+        <br />
+        <em>The Awakening</em>
+        initially seems like just a feminist period piece, but upon closer inspection, it has a deeper meaning about consciousness and self that anyone can learn from. The theme of our Comparative
+        Literature course is the concept of <span class="font-mono">Human</span>. <em>The Awakening</em>
+        grapples with these questions, showing the human transformation in the protagonist from one tied down by society to one who is free and completely herself. Through dealing with the concept of
+        self, the book addresses humanity and how to define it.
+        <br />
         <br />
         Often when we think about humanity, what makes us human, and who is inhuman, we tend to think about social constructs—race, gender, nationality, sexuality—and the conflicts associated with
         them. But Kate Chopin looks at it differently; one&#39;s humanity isn&#39;t defined by others, but simply through one&#39;s own journey in self-consciousness.
       </p>
     </div>
   </section>
-  <section v-if="isOpen" class="h-auto w-auto bg-blue-200">
+  <section v-if="isOpen" class="h-auto w-auto bg-blue-700">
     <div class="relative flex flex-row gap-8 p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <img class="h-auto w-full" src="~/assets/images/wedding.jpeg" />
       <div>
@@ -119,61 +119,68 @@ export default {
           </a>
           These ideas could be found everywhere in culture, from societal norms to popular media. Piety represents religious dedication, Purity means physical virginity or innocence, Submission is to
           always listen to a man, and Domesticity was about staying at and tending to the home at all times. All four of these are expected of Edna Pontellier, and she feels weighed down by
-          them&#8212;trapped like a bird. Kate Chopin invokes the metaphor of a caged parrot, something that Edna strongly identifies with. In the course of <em>The Awakening</em>, Edna tries to
-          overcome these virtues: her marriage was a rebellion against her family's religion, she engages in both emotional and sexual extramarital affairs, she stops readily listening to her husband.
-          Yet, at the very end of the book, she notes that she's not fully able to escape Domesticity; her children are "like antagonists who had overcome her; who had overpowered and sought to drag
-          her into the soul&#39;s slavery for the rest of her days" (Chopin 163). Mademoiselle Reisz ties the Cult of True Womanhood and bird imagery together beautifully, saying "&#39;The bird that
-          would soar above the level plain of tradition and prejudice must have strong wings. It is a sad spectacle to see the weaklings bruised, exhausted, fluttering back to earth&#39;" (129).
+          them&#8212;trapped like a bird. Kate Chopin invokes the metaphor of a caged parrot, something that Edna strongly identifies with. In the course of
+          <em>The Awakening</em>
+          , Edna tries to overcome these virtues: her marriage was a rebellion against her family's religion, she engages in both emotional and sexual extramarital affairs, she stops readily listening
+          to her husband. Yet, at the very end of the book, she notes that she's not fully able to escape Domesticity; her children are "<span class="font-mono"
+            >like antagonists who had overcome her; who had overpowered and sought to drag her into the soul&#39;s slavery for the rest of her days</span
+          >" (Chopin 163). Mademoiselle Reisz ties the Cult of True Womanhood and bird imagery together beautifully, saying "&#39;<span class="font-mono"
+            >The bird that would soar above the level plain of tradition and prejudice must have strong wings. It is a sad spectacle to see the weaklings bruised, exhausted, fluttering back to
+            earth</span
+          >&#39;" (129).
         </p>
       </div>
     </div>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-300">
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-600">
     <div class="relative flex flex-row gap-8 p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <img class="h-96 w-auto" src="~/assets/images/gulf.jpg" />
       <div>
         <h2>Self-Consciousness</h2>
         <p>
-          Edna's self-consciousness in <em>The Awakening</em> is represented in a multitude of ways. Art has a huge impact on her; she dedicates much of her time to painting and listens to music
-          passionately. Nature is also important: Edna often expresses enjoyment when she's at the beach, as she looks out in the Gulf. Edna's sisterhood with other women, particularly Adele
-          Ratignolle and Mademoiselle Reisz, plays an important role. It's with these women that she is able to confess her feelings and is also supported and encouraged to be her true self&#8212;the
-          book clearly passes the Bechdel test. <br />
+          Edna's self-consciousness in
+          <em>The Awakening</em>
+          is represented in a multitude of ways. Art has a huge impact on her; she dedicates much of her time to painting and listens to music passionately. Nature is also important: Edna often
+          expresses enjoyment when she's at the beach, as she looks out in the Gulf. Edna's sisterhood with other women, particularly Adele Ratignolle and Mademoiselle Reisz, plays an important role.
+          It's with these women that she is able to confess her feelings and is also supported and encouraged to be her true self&#8212;the book clearly passes the Bechdel test.
+          <br />
           <br />
           It's argued that these aspects of self-consciousness are more important than the more obvious themes of desire and feminism.
           <a class="text-blue-50 hover:underline" href="https://scholarcommons.sc.edu/cgi/viewcontent.cgi?article=1092&context=tor">
-            The book isn't just about Edna's role as a woman&#8212;she doesn't even leave the patriarchal social construct of <em>The Awakening</em>&#8212;but about a transformation and rediscovery of
-            consciousness that can apply to anyone.
+            The book isn't just about Edna's role as a woman&#8212;she doesn't even leave the patriarchal social construct of
+            <em>The Awakening</em>
+            &#8212;but about a transformation and rediscovery of consciousness that can apply to anyone.
           </a>
           Chopin is inviting readers to an individual's journey of realizing their true self in a society they don't quite fit in.
         </p>
       </div>
     </div>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-400">
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-500">
     <div class="relative flex flex-row gap-8 p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <img class="h-96 w-auto" src="~/assets/images/rainy.jpeg" />
       <div>
         <h2>Solitude</h2>
         <p>
-          Solitude is a clear theme in <em>The Awakening</em>. In many of the scenes in the book, only Edna is present, and Chopin's original title for the book was "A Solitary Soul". The symbollism
-          of the sea and birds are often associated with loneliness, just as they are in the book.
+          Solitude is a clear theme in<em>The Awakening</em>. In many of the scenes in the book, only Edna is present, and Chopin's original title for the book was
+          <span class="font-mono">A Solitary Soul</span>. The symbolism of the sea and birds are often associated with loneliness, just as they are in the book.
         </p>
       </div>
       <img class="h-96 w-auto" src="~/assets/images/beach.jpeg" />
     </div>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-500">
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-400">
     <div class="relative flex flex-row gap-8 p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <img class="h-auto w-full" src="~/assets/images/pronouneye.jpeg" />
       <div>
         <h2>Sexuality</h2>
         <p>
           Edna's discovery of her sexuality and desire is a powerful way to begin her transformation. When Edna starts listening to her own feelings and engaging in relationships that truly meet her
-          needs, she has a better understanding of herself as a human. This also ties into feminism; Sara Ahmed explains in <em>Living a Feminist Life</em>, "Feminism can begin with a body, a body in
-          touch with a world." Once a woman understands and prioritizes her desire and sensuality is doing better, she can begin the process of overcoming society's hurdles. Feminism&#8212;which isn't
-          limited to just the female sex or gender&#8212;start with the individual. Likewise, not allowing one to explore or be true to one's sexuality is oppression as it limits their ability to
-          really be human. This concept is also explored in Leslie Feinberg's <em>Stone Butch Blues</em>, in which the main character has to undergo physical and sexual abuse because she's unable to
-          deny her sexuality or conform to society's expectations.
+          needs, she has a better understanding of herself as a human. This also ties into feminism; Sara Ahmed explains in
+          <em>Living a Feminist Life</em>, "<span class="font-mono">Feminism can begin with a body, a body in touch with a world.</span>" Once a woman understands and prioritizes her desire and
+          sensuality is doing better, she can begin the process of overcoming society's hurdles. Feminism&#8212;which isn't limited to just the female sex or gender&#8212;start with the individual.
+          Likewise, not allowing one to explore or be true to one's sexuality is oppression as it limits their ability to really be human. This concept is also explored in Leslie Feinberg's
+          <em>Stone Butch Blues</em>, in which the main character has to undergo physical and sexual abuse because she's unable to deny her sexuality or conform to society's expectations.
           <a class="text-blue-50 hover:underline" href="https://www.nytimes.com/2020/02/05/books/review/kate-chopin-the-awakening.html">
             Pleasure and sensation isn't gratuitous or salacious for people who've been oppressed and gaslit by society, it's an essential reorientation.
           </a>
@@ -181,19 +188,19 @@ export default {
       </div>
     </div>
   </section>
-  <!-- <section v-if="isOpen" class="h-screen w-auto bg-blue-600">
+  <!-- <section v-if="isOpen" class="h-screen w-auto bg-blue-300">
     <div class="relative p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <h2>Escape</h2>
       <p>Filler text...</p>
     </div>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-700">
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-200">
     <div class="relative p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <h2>Freedom</h2>
       <p>Filler text...</p>
     </div>
   </section> -->
-  <section v-if="isOpen" class="h-full w-auto overflow-hidden bg-blue-800">
+  <section v-if="isOpen" class="h-full w-auto overflow-hidden bg-blue-100">
     <div class="relative top-28 px-40">
       <div class="bird-container bird-container--one">
         <div class="bird bird--one"></div>
@@ -210,7 +217,7 @@ export default {
     </div>
     <div class="relative p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <h2>Modern Wokeness</h2>
-      <button @click="openModal()" class="flex flex-row items-center justify-center text-blue-100">
+      <button @click="openModal()" class="flex flex-row items-center justify-center text-blue-950">
         <Icon class="text-4xl" :name="button.arrow" />
         <p>Read a Satirical Poem by Juliana Gray</p>
       </button>
@@ -342,8 +349,8 @@ export default {
         </p>
       </div>
     </div>
-    <div v-if="isOpen" class="fixed right-[3%] top-1/2 h-36 w-36 translate-y-[-50%] rounded-full bg-blue-950 opacity-90">
-      <p id="number" class="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-7xl text-blue-100">0</p>
+    <div v-if="isOpen" class="fixed right-[3%] top-1/2 h-36 w-36 translate-y-[-50%] rounded-full bg-blue-50 opacity-80">
+      <p id="number" class="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-7xl text-blue-950">0</p>
     </div>
   </section>
 </template>
