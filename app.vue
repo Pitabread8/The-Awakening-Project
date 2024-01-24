@@ -233,7 +233,7 @@ export default {
         <div class="bird bird--four"></div>
       </div>
     </div>
-    <div class="relative p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
+    <div class="relative p-40">
       <h2>Modern Wokeness</h2>
       <p>
         In the book, the awakening represents Edna unlocking a part of her self, her personality. This concept of being awake has been used in similar contexts for a long time in other places. During the 1860 American presidential election, a political organization called the Wide Awakes consisting
