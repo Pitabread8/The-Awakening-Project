@@ -54,7 +54,7 @@ export default {
       document.getElementById("number").innerText = numerals[index];
 
       // let audios = [prelude, milliondollarman, zampa, blackbird, fadeintoyou, lookbridge, poetpeasant, seabirds];
-      let audios = [prelude, milliondollarman, zampa, blackbird, fadeintoyou, seabirds];
+      let audios = [prelude, milliondollarman, zampa, blackbird, fadeintoyou, lookbridge, seabirds];
 
       if (index != this.a) {
         this.audio.pause();
@@ -85,7 +85,7 @@ export default {
       <Icon class="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] text-8xl text-blue-800" name="mdi:play" />
     </button>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-600">
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-700">
     <div class="relative p-40 text-blue-50">
       <h2>Welcome!</h2>
       <p>
@@ -104,14 +104,14 @@ export default {
       </p>
     </div>
   </section>
-  <section v-if="isOpen" class="h-auto w-auto bg-blue-500">
-    <div class="relative flex flex-row gap-8 p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
-      <img class="h-auto w-full" src="~/assets/images/wedding.jpeg" />
+  <section v-if="isOpen" class="h-auto w-auto bg-blue-600">
+    <div class="relative flex flex-row gap-8 p-40">
+      <img class="h-auto w-full" src="~/assets/images/wedding.jpeg" data-aos="fade-up" data-aos-duration="3000" />
       <div>
         <h2>Cult of True Womanhood</h2>
         <p>
           The Cult of True Womanhood is an ideology and system that dominated middle and upper classes in 19th century United States.
-          <a class="text-blue-50 hover:underline" href="https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/33518/Mizic_washington_0250O_14462.pdf"> Its main tenets are piety (mother), purity (daughter), submissiveness (sister), and domesticity (wife). </a>
+          <a class="text-blue-50 hover:underline" href="https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/33518/Mizic_washington_0250O_14462.pdf">Its main tenets are piety (mother), purity (daughter), submissiveness (sister), and domesticity (wife).</a>
           These ideas could be found everywhere in culture, from societal norms to popular media. Piety represents religious dedication, Purity means physical virginity or innocence, Submission is to always listen to a man, and Domesticity was about staying at and tending to the home at all times.
           All four of these are expected of Edna Pontellier, and she feels weighed down by them&#8212;trapped like a bird. Kate Chopin invokes the metaphor of a caged parrot, something that Edna strongly identifies with. In the course of
           <em>The Awakening</em>
@@ -122,9 +122,9 @@ export default {
       </div>
     </div>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-400">
-    <div class="relative flex flex-row gap-8 p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
-      <img class="h-96 w-auto" src="~/assets/images/gulf.jpg" />
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-500">
+    <div class="relative flex flex-row gap-8 p-40">
+      <img class="h-96 w-auto" src="~/assets/images/gulf.jpg" data-aos="fade-up" data-aos-duration="3000" />
       <div>
         <h2>Self-Consciousness</h2>
         <p>
@@ -135,28 +135,28 @@ export default {
           <br />
           <br />
           It's argued that these aspects of self-consciousness are more important than the more obvious themes of desire and feminism.
-          <a class="text-blue-50 hover:underline" href="https://scholarcommons.sc.edu/cgi/viewcontent.cgi?article=1092&context=tor">
-            The book isn't just about Edna's role as a woman&#8212;she doesn't even leave the patriarchal social construct of
+          <a class="text-blue-50 hover:underline" href="https://scholarcommons.sc.edu/cgi/viewcontent.cgi?article=1092&context=tor"
+            >The book isn't just about Edna's role as a woman&#8212;she doesn't even leave the patriarchal social construct of
             <em>The Awakening</em>
-            &#8212;but about a transformation and rediscovery of consciousness that can apply to anyone.
-          </a>
+            &#8212;but about a transformation and rediscovery of consciousness that can apply to anyone.</a
+          >
           Chopin is inviting readers to an individual's journey of realizing their true self in a society they don't quite fit in.
         </p>
       </div>
     </div>
   </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-300">
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-400">
     <div class="h-min p-40">
-      <div class="relative flex flex-row gap-8" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
-        <img class="h-96 w-auto" src="~/assets/images/rainy.jpeg" />
+      <div class="relative flex flex-row gap-8">
+        <img class="h-96 w-auto" src="~/assets/images/rainy.jpeg" data-aos="fade-up" data-aos-duration="3000" />
         <div>
           <h2 class="text-center">Solitude</h2>
           <p>
-            Solitude is a clear theme in <em>The Awakening</em>. In many of the scenes in the book, only Edna is present, and Chopin's original title for the book was <span class="font-serif">A Solitary Soul</span>. The symbolism of the sea and birds are often associated with loneliness, just as they
-            are in the book.
+            Solitude is a clear theme in <em>The Awakening</em>. In many of the scenes in the book, only Edna is present, and Chopin's original title for the book was "<span class="font-serif">A Solitary Soul</span>". The symbolism of the sea and birds are often associated with loneliness, just as
+            they are in the book.
           </p>
         </div>
-        <img class="h-96 w-auto" src="~/assets/images/beach.jpeg" />
+        <img class="h-96 w-auto" src="~/assets/images/beach.jpeg" data-aos="fade-up" data-aos-duration="3000" />
       </div>
       <svg class="relative bottom-0 z-50 h-1/4 w-full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <defs>
@@ -171,29 +171,48 @@ export default {
       </svg>
     </div>
   </section>
+  <section v-if="isOpen" class="h-screen w-auto bg-blue-300">
+    <div>
+      <div class="relative flex flex-row gap-8 px-40 pb-4 pt-40">
+        <img class="h-full w-auto" src="~/assets/images/pronouneye.jpeg" data-aos="fade-up" data-aos-duration="3000" />
+        <div>
+          <h2>Sexuality</h2>
+          <p>
+            Edna's discovery of her sexuality and desire is a powerful way to begin her transformation. When Edna starts listening to her own feelings and engaging in relationships that truly meet her needs, she has a better understanding of herself as a human. This also ties into feminism: once a
+            woman understands and prioritizes her desire and sensuality, she can begin the process of overcoming society's hurdles. Likewise, not allowing one to explore or be true to one's sexuality is oppression as it limits their ability to really be human. This concept is also explored in Leslie
+            Feinberg's <em>Stone Butch Blues</em>, in which the main character has to undergo physical and sexual abuse because she's unable to deny her sexuality or conform to society's expectations.
+            <a class="text-blue-50 hover:underline" href="https://www.nytimes.com/2020/02/05/books/review/kate-chopin-the-awakening.html">Pleasure and sensation isn't gratuitous or salacious for people who've been oppressed and gaslit by society, it's an essential reorientation.</a>
+            <br />
+            <br />
+          </p>
+        </div>
+      </div>
+      <p class="w-full px-40">
+        Edna experiences sensuality with nature, namely the sea. "<span class="font-serif"
+          >The voice of the sea is seductive; never ceasing, whispering, clamoring, murmuring, inviting the soul to wander for a spell in abysses of solitude; to lose itself in mazes of inward contemplation. The voice of the sea speaks to the soul. The touch of the sea is sensuous, enfolding the
+          body in its soft, close embrace</span
+        >" (Chopin 25). The sea's personification mirrors the emotions Edna experiences as she explores her sexuality. It's another catalyst for Edna's awakening, and it plays an important role in her liberation later on.
+      </p>
+    </div>
+  </section>
   <section v-if="isOpen" class="h-screen w-auto bg-blue-200">
-    <div class="relative flex flex-row gap-8 p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
-      <img class="h-auto w-full" src="~/assets/images/pronouneye.jpeg" />
+    <div class="relative flex flex-row gap-8 py-40 px-80">
+      <img class="h-auto w-1/3" src="~/assets/images/drowning.jpeg" data-aos="fade-up" data-aos-duration="3000" />
+      <!-- <div class="w-1/2"></div> -->
       <div>
-        <h2>Sexuality</h2>
+        <h2>Escape</h2>
         <p>
-          Edna's discovery of her sexuality and desire is a powerful way to begin her transformation. When Edna starts listening to her own feelings and engaging in relationships that truly meet her needs, she has a better understanding of herself as a human. This also ties into feminism; Sara Ahmed
-          explains in
-          <em>Living a Feminist Life</em>, "<span class="font-serif">Feminism can begin with a body, a body in touch with a world.</span>" Once a woman understands and prioritizes her desire and sensuality is doing better, she can begin the process of overcoming society's hurdles.
-          Feminism&#8212;which isn't limited to just the female sex or gender&#8212;start with the individual. Likewise, not allowing one to explore or be true to one's sexuality is oppression as it limits their ability to really be human. This concept is also explored in Leslie Feinberg's
-          <em>Stone Butch Blues</em>, in which the main character has to undergo physical and sexual abuse because she's unable to deny her sexuality or conform to society's expectations.
-          <a class="text-blue-50 hover:underline" href="https://www.nytimes.com/2020/02/05/books/review/kate-chopin-the-awakening.html"> Pleasure and sensation isn't gratuitous or salacious for people who've been oppressed and gaslit by society, it's an essential reorientation. </a>
+          Suicide has always been a heavy topic in literature. While other difficult things, like killing another person, seem black and white, the idea of killing oneself is always complex. Yet its use in <em>The Awakening</em> is powerful and symbolic. Firstly, Chopin completes the book suggesting
+          Edna drowns herself. The inevitable unknown of an ending, compounded by it being open to interpretation, makes Edna's death seem more peaceful than it normally is. Secondly, the suicide can be seen as a beautiful act, considering the motivation and circumstances. Edna has been feeling
+          intensely trapped and she's realized that she'll never be free. Compared to living in a metaphorical cage and death, death is liberty, an escape.
+          <a class="text-blue-50 hover:underline" href="https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/33518/Mizic_washington_0250O_14462.pdf"
+            >There's also significance of birds and sea in this scene. The sea is literally represented as she drowns, while bird imagery often represents souls in the mythological escape to the afterlife.</a
+          >
         </p>
       </div>
     </div>
   </section>
-  <!-- <section v-if="isOpen" class="h-screen w-auto bg-blue-300">
-    <div class="relative p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
-      <h2>Escape</h2>
-      <p>Filler text...</p>
-    </div>
-  </section>
-  <section v-if="isOpen" class="h-screen w-auto bg-blue-200">
+  <!-- <section v-if="isOpen" class="h-screen w-auto bg-blue-200">
     <div class="relative p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <h2>Freedom</h2>
       <p>Filler text...</p>
@@ -216,9 +235,15 @@ export default {
     </div>
     <div class="relative p-40" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="3000">
       <h2>Modern Wokeness</h2>
+      <p>
+        In the book, the awakening represents Edna unlocking a part of her self, her personality. This concept of being awake has been used in similar contexts for a long time in other places. During the 1860 American presidential election, a political organization called the Wide Awakes consisting
+        of and working with young men campaigned for Abraham Lincoln. In the early 1900s, the term <span class="font-serif">woke</span> was used in songs to warn Black people of the dangers in the South. By the mid-1900s, being <span class="font-serif">woke</span> meant you were culturally and
+        politically aware. It was used largely in AAVE, but hadn't become very mainstream. Then, in the 2000s, it started to become popular online. As the Black Lives Matter (BLM) movement gained prominence, it was adopted by non-Black Americans to signal support. However, in the last few years, the
+        term has been used disparagingly by conservatives to mock what they believe is performative activism.
+      </p>
       <button @click="openModal()" class="flex flex-row items-center justify-center text-blue-950">
         <Icon class="text-4xl" :name="button.arrow" />
-        <p>Read a Satirical Poem by Juliana Gray</p>
+        <p>Poet Juliana Gray adapted the story of <em>The Awakening</em> into a satirical poem that reflects the similitude between the book and being <span class="font-serif">woke.</span></p>
       </button>
       <div v-if="isShown">
         <p class="font-serif">
